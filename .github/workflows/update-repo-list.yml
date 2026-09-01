@@ -23,4 +23,4 @@ jobs:
           query: "org:PrdShowcaseHub"
           # 最多显示 40 个仓库，可根据需要调整
           max: 40
-
+          path: "profile/README.md"
