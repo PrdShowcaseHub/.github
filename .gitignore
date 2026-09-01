@@ -1,0 +1,20 @@
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# IDE / 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 临时文件
+*.tmp
+*.bak
+*.log
+
+# 如果本地有测试用的临时文件
+test-*.md
+draft-*.md
+

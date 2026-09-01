@@ -1,0 +1,26 @@
+name: Update README Repos List
+
+on:
+  schedule:
+    # 每天 UTC 时间 0 点运行，即北京时间早上 8 点
+    - cron: "0 0 * * *"
+  # 支持手动触发，方便测试
+  workflow_dispatch:
+
+jobs:
+  update-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run readme-repos-list
+        uses: koj-co/readme-repos-list@master
+        with:
+          # 使用默认的 GITHUB_TOKEN 即可
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # 关键：搜索你组织下的所有仓库
+          query: "org:PrdShowcaseHub"
+          # 最多显示 40 个仓库，可根据需要调整
+          max: 40
+
