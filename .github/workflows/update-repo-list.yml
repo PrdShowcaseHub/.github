@@ -20,7 +20,7 @@ jobs:
           # 使用默认的 GITHUB_TOKEN 即可
           token: ${{ secrets.GITHUB_TOKEN }}
           # 关键：搜索你组织下的所有仓库
-          query: "org:PrdShowcaseHub"
+          query: "org:PrdShowcaseHub -repo:.github"
           # 最多显示 40 个仓库，可根据需要调整
           max: 40
           path: "profile/README.md"
